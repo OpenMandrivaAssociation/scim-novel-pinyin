@@ -33,13 +33,13 @@ rm -f $RPM_BUILD_ROOT/%{scim_plugins_dir}/IMEngine/novel_pinyin.*a
 rm -f $RPM_BUILD_ROOT/%{scim_plugins_dir}/SetupUI/novel-pinyin-imengine-setup.*a
 
 install -m 644 %SOURCE1 \
-               $RPM_BUILD_ROOT/%{_datadir}/scim/novel-pinyin/bigram.db
+               %buildroot/%{_datadir}/scim/novel-pinyin/bigram.db
 install -m 644 %SOURCE2 \
-               $RPM_BUILD_ROOT/%{_datadir}/scim/novel-pinyin/gb_char.bin
+               %buildroot/%{_datadir}/scim/novel-pinyin/gb_char.bin
 install -m 644 %SOURCE3 \
-               $RPM_BU3LD_ROOT/%{_datadir}/scim/novel-pinyin/gbk_char.bin
+               %buildroot/%{_datadir}/scim/novel-pinyin/gbk_char.bin
 install -m 644 %SOURCE4 \
-               $RPM_BUILD_ROOT/%{_datadir}/scim/novel-pinyin/pinyin_index.bin
+               %buildroot/%{_datadir}/scim/novel-pinyin/pinyin_index.bin
 
 %find_lang %oname
 
@@ -54,11 +54,3 @@ install -m 644 %SOURCE4 \
 %{_datadir}/scim/novel-pinyin/gbk_char.bin
 %{_datadir}/scim/novel-pinyin/pinyin_index.bin
 %{_datadir}/scim/novel-pinyin/special_table
-
-
-%changelog
-* Tue Feb 19 2008 pwu@suse.de
-- update to novel-pinyin 0.1.3
-  • Fixes i18n bug, duplicate candidates, show up candidates.
-* Thu Feb 14 2008 pwu@suse.de
-- Initial Release of novel-pinyin
