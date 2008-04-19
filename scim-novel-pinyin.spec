@@ -4,12 +4,12 @@ Name:           scim-%{oname}
 BuildRequires:  gtk2-devel scim-devel intltool gcc-c++ 
 BuildRequires:  db-devel
 Summary:        Novel Pinyin
-Version:        0.1.5
+Version:        0.1.6
 Release:        %mkrel 1
 License:        GPLv2+
 Group:          System/Internationalization
 Url:            http://novel-pinyin.sourceforge.net
-Source0:        novel-pinyin-%{version}.tar.bz2
+Source0:        http://kent.dl.sourceforge.net/sourceforge/novel-pinyin/novel-pinyin-%{version}.tar.gz
 Source1: 	bigram.db
 Source2:	gb_char.bin
 Source3:	gbk_char.bin
