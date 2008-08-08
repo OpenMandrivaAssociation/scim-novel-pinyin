@@ -5,7 +5,7 @@ BuildRequires:  gtk2-devel scim-devel intltool gcc-c++
 BuildRequires:  db-devel
 Summary:        Novel Pinyin
 Version:        0.1.6
-Release:        %mkrel 1
+Release:        %mkrel 2
 License:        GPLv2+
 Group:          System/Internationalization
 Url:            http://novel-pinyin.sourceforge.net
