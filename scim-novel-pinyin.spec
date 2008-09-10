@@ -4,16 +4,18 @@ Name:           scim-%{oname}
 BuildRequires:  gtk2-devel scim-devel intltool gcc-c++ 
 BuildRequires:  db-devel
 Summary:        Novel Pinyin
-Version:        0.1.6
-Release:        %mkrel 2
+Version:        0.2.3
+Release:        %mkrel 1
 License:        GPLv2+
 Group:          System/Internationalization
 Url:            http://novel-pinyin.sourceforge.net
 Source0:        http://kent.dl.sourceforge.net/sourceforge/novel-pinyin/novel-pinyin-%{version}.tar.gz
+Patch0:		http://nchc.dl.sourceforge.net/sourceforge/novel-pinyin/urgent-patch-fix-novel-pinyin-first-load.patch
 Source1: 	bigram.db
 Source2:	gb_char.bin
 Source3:	gbk_char.bin
 Source4:        pinyin_index.bin
+Requires:	scim-client = %{scim_api}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
@@ -21,7 +23,7 @@ A Simplified Chinese Sentence-Based Pinyin Input Method Engine Based On Markov M
 
 %prep
 %setup -q -n %{oname}-%{version}
-find . -type f | xargs chmod u+w
+%patch0 -p2
 
 %build
 %configure2_5x
