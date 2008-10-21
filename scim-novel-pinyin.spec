@@ -10,10 +10,6 @@ License:        GPLv2+
 Group:          System/Internationalization
 Url:            http://novel-pinyin.sourceforge.net
 Source0:        http://kent.dl.sourceforge.net/sourceforge/novel-pinyin/novel-pinyin-%{version}.tar.gz
-Source1: 	bigram.db
-Source2:	gb_char.bin
-Source3:	gbk_char.bin
-Source4:        pinyin_index.bin
 Requires:	scim-client = %{scim_api}
 Provides:	%{oname} = %{version}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
