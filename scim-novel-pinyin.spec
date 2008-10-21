@@ -29,15 +29,6 @@ A Simplified Chinese Sentence-Based Pinyin Input Method Engine Based On Markov M
 rm -f $RPM_BUILD_ROOT/%{scim_plugins_dir}/IMEngine/novel_pinyin.*a
 rm -f $RPM_BUILD_ROOT/%{scim_plugins_dir}/SetupUI/novel-pinyin-imengine-setup.*a
 
-install -m 644 %SOURCE1 \
-               %buildroot/%{_datadir}/scim/novel-pinyin/bigram.db
-install -m 644 %SOURCE2 \
-               %buildroot/%{_datadir}/scim/novel-pinyin/gb_char.bin
-install -m 644 %SOURCE3 \
-               %buildroot/%{_datadir}/scim/novel-pinyin/gbk_char.bin
-install -m 644 %SOURCE4 \
-               %buildroot/%{_datadir}/scim/novel-pinyin/pinyin_index.bin
-
 %find_lang %oname
 
 %files -f %oname.lang
