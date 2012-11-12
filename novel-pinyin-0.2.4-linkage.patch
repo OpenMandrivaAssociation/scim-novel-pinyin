@@ -1,0 +1,65 @@
+--- modules/scim/Makefile.am.link	2009-01-30 16:22:43.000000000 +0100
++++ modules/scim/Makefile.am	2009-01-30 16:24:09.000000000 +0100
+@@ -50,8 +50,8 @@
+ novel_pinyin_imengine_setup_la_LDFLAGS = -avoid-version \
+           	                       -rpath $(setupmoduledir) \
+                 	                 -module \
+-                        	         @LIBTOOL_EXPORT_OPTIONS@ \
+-                                	 @SCIM_LIBS@ \
++                        	         @LIBTOOL_EXPORT_OPTIONS@
++novel_pinyin_imengine_setup_la_LIBADD  = @SCIM_LIBS@ \
+                                  	@SCIM_GTKUTILS_LIBS@ \
+                                  	@LTLIBINTL@
+ 
+@@ -76,13 +76,13 @@
+ novel_pinyin_la_LDFLAGS       = -avoid-version \
+       		                    -rpath $(moduledir) \
+         	                  -module \
+-                	          @LIBTOOL_EXPORT_OPTIONS@ \
+-                        	  @SCIM_LIBS@ \
+-	                          @LTLIBINTL@ \
+-				  @GLIB2_LDFLAGS@ 
++                	          @LIBTOOL_EXPORT_OPTIONS@
+ 
+ novel_pinyin_la_LIBADD        = libnovel_pinyin.la \
+ 				../../src/storage/libstorage.la \
+-                                ../../src/lookup/liblookup.la
++                                ../../src/lookup/liblookup.la \
++				@SCIM_LIBS@ \
++				@LTLIBINTL@ \
++				@GLIB2_LDFLAGS@
+ 				
+ 
+--- modules/scim/Makefile.in.link	2009-01-30 16:24:18.000000000 +0100
++++ modules/scim/Makefile.in	2009-01-30 16:26:07.000000000 +0100
+@@ -336,8 +336,8 @@
+ novel_pinyin_imengine_setup_la_LDFLAGS = -avoid-version \
+           	                       -rpath $(setupmoduledir) \
+                 	                 -module \
+-                        	         @LIBTOOL_EXPORT_OPTIONS@ \
+-                                	 @SCIM_LIBS@ \
++                        	         @LIBTOOL_EXPORT_OPTIONS@
++novel_pinyin_imengine_setup_la_LIBADD = @SCIM_LIBS@ \
+                                  	@SCIM_GTKUTILS_LIBS@ \
+                                  	@LTLIBINTL@
+ 
+@@ -356,14 +356,14 @@
+ novel_pinyin_la_LDFLAGS = -avoid-version \
+       		                    -rpath $(moduledir) \
+         	                  -module \
+-                	          @LIBTOOL_EXPORT_OPTIONS@ \
+-                        	  @SCIM_LIBS@ \
+-	                          @LTLIBINTL@ \
+-				  @GLIB2_LDFLAGS@ 
++                	          @LIBTOOL_EXPORT_OPTIONS@
+ 
+ novel_pinyin_la_LIBADD = libnovel_pinyin.la \
+ 				../../src/storage/libstorage.la \
+-                                ../../src/lookup/liblookup.la
++                                ../../src/lookup/liblookup.la \
++                                @SCIM_LIBS@ \
++                                @LTLIBINTL@ \
++                                @GLIB2_LDFLAGS@
+ 
+ all: all-am
+ 
