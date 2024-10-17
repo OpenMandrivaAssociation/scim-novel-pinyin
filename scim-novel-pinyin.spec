@@ -8,7 +8,7 @@ Version:        0.2.5
 Release:        %mkrel 1
 License:        GPLv2+
 Group:          System/Internationalization
-Url:            http://novel-pinyin.sourceforge.net
+Url:            https://novel-pinyin.sourceforge.net
 Source0:        http://kent.dl.sourceforge.net/sourceforge/novel-pinyin/novel-pinyin-%{version}.tar.gz
 Patch0:		novel-pinyin-0.2.4-linkage.patch
 Requires:	scim-client = %{scim_api}
