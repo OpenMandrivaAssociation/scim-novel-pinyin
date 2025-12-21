@@ -1,6 +1,11 @@
 %define oname novel-pinyin
 
 Name:           scim-%{oname}
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  gtk2-devel scim-devel intltool gcc-c++ 
 BuildRequires:  db-devel
 Summary:        Novel Pinyin
